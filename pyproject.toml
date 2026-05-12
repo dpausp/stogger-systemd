@@ -8,7 +8,6 @@ dynamic = ["version"]
 requires-python = ">=3.13"
 dependencies = [
     "stogger",
-    "systemd-python; sys_platform == 'linux'",
 ]
 classifiers = [
     "Operating System :: POSIX :: Linux",
@@ -27,3 +26,8 @@ name = "testpypi"
 url = "https://test.pypi.org/simple/"
 publish-url = "https://test.pypi.org/legacy/"
 explicit = true
+
+[dependency-groups]
+dev = [
+    "pytest>=9.0.3",
+]
